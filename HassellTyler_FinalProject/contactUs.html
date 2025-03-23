@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tyler Hassell">
+    <meta name="keywords" content="WEBD221, webpage, business, professional, web project">
+    <meta name="description" content="Recruiting">
+    <link rel="stylesheet" type="text/css" href="webd221.css">
+    <title>Contact Form</title>
+  </head>
+  <body>
+    <main>
+      <!--Heading and Navigation-->
+      <header>
+        <section class="heading">
+          <h1 id="page-header">Contact Us</h1>
+          <div class="navigation">
+            <nav>
+              <a href="HassellTylerAssignment.html" target="_blank">Home</a>
+              <a href="mission.html" target="_blank">Mission</a>
+              <a href="recruiting.html" target="_blank">Recruiting</a> 
+              <a href="development.html" target="_blank">Development</a>
+              <a href="retention.html" target="_blank">Retention</a>
+              <a href="solutions.html" target="_blank">Business Solutions</a>
+              <a href="contactUs.html">Contact Us</a>
+            </nav>
+          </div>
+        </section>
+      </header>
+
+      <!-- Contact Form Section -->
+      <section class="contact-form">
+        <form action="#" method="POST">
+          <fieldset>
+            <legend>Power Up Your Business</legend>
+            <!--Name Block-->
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" placeholder="Your name here" required>
+            </div>
+            <!--Company Block-->
+            <div class="form-group">
+              <label for="company">Company:</label>
+              <input type="text" id="company" name="company" placeholder="The name of your company">
+            </div>
+            <!--Industry/Field Block-->
+            <div class="form-group">
+              <label for="field">Field:</label>
+              <select id="field" name="field">
+                <option value="">Select your industry</option>
+                <option value="technology">Technology</option>
+                <option value="healthcare">Healthcare</option>
+                <option value="finance">Finance</option>
+                <option value="retail">Retail</option>
+                <option value="manufacturing">Manufacturing</option>
+                <option value="education">Education</option>
+                <option value="consulting">Consulting</option>
+                <option value="real-estate">Real Estate</option>
+              </select>
+            </div>
+            <!--Interests Block-->
+            <div class="form-group">
+              <h3 class="form-section-heading">What are you interested in?</h3>
+              <div class="checkbox-group">
+                <label><input type="checkbox" name="interests" value="mentorship"> Mentorship</label>
+                <label><input type="checkbox" name="interests" value="leadership"> Leadership Seminars</label>
+                <label><input type="checkbox" name="interests" value="communication"> Business Communication Seminars</label>
+                <label><input type="checkbox" name="interests" value="talent"> Talent Pool Advising</label>
+                <label><input type="checkbox" name="interests" value="growth"> Business Growth</label>
+                <label><input type="checkbox" name="interests" value="keynote"> Keynote Engagement</label>
+              </div>
+            </div>
+            <!--Contact Method Block-->
+            <div class="form-group">
+              <h3 class="form-section-heading">Preferred Contact Method:</h3>
+              <div class="radio-group">
+                <label><input type="radio" name="contact_method" value="phone" required> Phone</label>
+                <label><input type="radio" name="contact_method" value="email" required> Email</label>
+              </div>
+            </div>
+            <!--Phone and email block-->
+            <div class="form-group">
+              <input type="tel" id="phone" name="phone" placeholder="Phone number; 123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+              <input type="email" id="email" name="email" placeholder="Email address; user@domain.com">
+            </div>
+            <!--Call Connect Date-->
+            <div class="form-group">
+              <h3 class="form-section-heading">Let's connect on a call</h3>
+              <label for="meeting_date">Preferred Date: Select any date Tuesday-Friday</label>
+              <input type="date" id="meeting_date" name="meeting_date">
+            </div>
+            <!--Call Connect Time-->
+            <div class="form-group">
+              <div class="time-slider-container">
+                <label for="meeting_time">Preferred Time (10:00 AM - 7:00 PM CST):</label>
+                <input type="range" id="meeting_time" name="meeting_time" min="10" max="19" step="0.5">
+                <span id="time_display"></span>
+              </div>
+            </div>
+            <!--Submit Button-->
+            <div class="form-group">
+              <button type="submit" class="submit-btn">Submit</button>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+      
+      <hr>
+      
+      <footer class="team-footer">
+        <aside id="links-footer" style="float: left; padding-right: 30px;">
+          <ul id="footer-links" style="list-style-type: none;">
+            <li><a href="HassellTylerAssignment.html" target="_blank">Home</a></li>
+            <li><a href="mission.html" target="_blank">Mission</a></li>
+            <li><a href="recruiting.html" target="_blank">Recruiting</a></li>
+            <li><a href="development.html" target="_blank">Development</a></li>
+            <li><a href="retention.html" target="_blank">Retention</a></li>
+            <li><a href="solutions.html" target="_blank">Solutions</a></li>
+          </ul>
+        </aside>
+        <p id="address-content" style="padding-top: 18px; text-align: center;">Performance Professional Consulting<br>123 Platinum Dr.<br>Anywhere, USA 12345<br>TheMan@PPC.com<br>123-456-7890</p>
+      </footer>
+    </main>
+    <script src="JScontactUs.js" defer></script>
+  </body>
+</html>

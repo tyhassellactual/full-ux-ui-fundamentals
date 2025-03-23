@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tyler Hassell">
+    <meta name="keywords" content="WEBD221, webpage, business, professional, web project">
+    <meta name="description" content="Recruiting">
+    <link rel="stylesheet" type="text/css" href="webd221.css">
+    <title>Show Your Work</title>
+  </head>
+  <body>
+    <main>
+		<!--Headings and Navigation-->
+		<header>
+			<section class="heading">
+				<h1 id=page-header>We Give you the Solutions</h1>
+					<div class="navigation">
+					<nav>
+						<a href="HassellTylerAssignment.html" target="_blank">Home</a>
+						<a href="mission.html" target="_blank">Mission</a>
+						<a href="recruiting.html" target="_blank">Recruiting</a> 
+						<a href="development.html" target="_blank">Development</a>
+						<a href="retention.html" target="_blank">Retention</a>
+						<a href="solutions.html">Business Solutions</a>
+						<a href="contactUs.html" target="_blank">Contact Us</a><!-- Form will be here -->
+					</nav>
+				</div>
+			</section>
+		</header>
+	  	<!-- HTML5 drag-and-drop API -->
+		<section class="skill-sorting-game">
+			<h2>Let's see what you know!</h2>
+			<div class="game-container">
+				<!--Drag and Drop drop zones-->
+				<div class="drop-zones">
+					<div class="drop-zone" id="soft-skills" data-type="soft">
+						<h3>Soft Skills</h3>
+					</div>
+					<div class="drop-zone" id="technical-skills" data-type="technical">
+						<h3>Technical Skills</h3>
+					</div>
+				</div>
+				<!--Draggable Items-->
+				<div class="draggable-items" id="items-container">
+					<!-- Soft Skills -->
+					<div class="draggable" draggable="true" data-type="soft">Problem-Solving</div>
+					<div class="draggable" draggable="true" data-type="soft">Adaptability</div>
+					<div class="draggable" draggable="true" data-type="soft">Communication</div>
+					<div class="draggable" draggable="true" data-type="soft">Collaboration</div>
+					<div class="draggable" draggable="true" data-type="soft">Time Management</div>
+					<!-- Technical Skills -->
+					<div class="draggable" draggable="true" data-type="technical">Python</div>
+					<div class="draggable" draggable="true" data-type="technical">Tensorflow</div>
+					<div class="draggable" draggable="true" data-type="technical">AWS</div>
+					<div class="draggable" draggable="true" data-type="technical">Data Pipeline Automation</div>
+					<div class="draggable" draggable="true" data-type="technical">Flask & React</div>
+				</div>
+			</div>
+			<!--Controls for D&D game-->
+			<div class="game-controls">
+				<button id="reset-btn">Reset</button>
+				<button id="submit-btn">Submit</button>
+			</div>
+		</section>
+		<br>
+		<br>
+		<!--Talent Pool, join our team form-->
+		<section class="account-form">
+			<h2 class="form-title">JOIN OUR TALENT POOL!</h2>
+			<form id="talentPoolForm" class="talent-pool-form">
+				<fieldset>
+					<legend>Create an Account</legend>
+					<!--Name Block-->
+					<div class="form-group">
+						<label for="fullName">Name *</label>
+						<input 
+						type="text" 
+						id="fullName" 
+						name="fullName" 
+						placeholder="Last Name, First Name, MI" 
+						required
+						pattern="^[a-zA-Z\s,\.]+$">
+						<span class="error-message" id="nameError"></span>
+					</div>
+					<!--Email Block-->
+					<div class="form-group">
+						<label for="email">Email *</label>
+						<input 
+						type="email" 
+						id="email" 
+						name="email" 
+						placeholder="john.doe@yayamail.com" 
+						required>
+						<span class="error-message" id="emailError"></span>
+					</div>
+					<!--Username Block-->
+					<div class="form-group">
+						<label for="username">Create a Username *</label>
+						<input 
+						type="text" 
+						id="username" 
+						name="username" 
+						required
+						pattern="^[a-zA-Z0-9]+$">
+						<span class="error-message" id="usernameError"></span>
+					</div>
+					<!--Password Block-->
+					<div class="form-group">
+						<label for="password">Create a Password *</label>
+						<input 
+						type="password" 
+						id="password" 
+						name="password" 
+						required>
+						<span class="error-message" id="passwordError"></span>
+						<div class="password-requirements">
+						<!--Password parameters-->
+						<p>Password must:</p>
+						<ul>
+							<li id="length">Be at least 12 characters long</li>
+							<li id="uppercase">Contain at least 1 uppercase letter</li>
+							<li id="lowercase">Contain at least 1 lowercase letter</li>
+							<li id="symbol">Contain at least 1 symbol</li>
+							<li id="noPassword">Must not contain the word "password"</li>
+						</ul>
+						</div>
+					</div>
+					<!--HTML FileAPI for Resume Upload-->
+					<div class="form-group">
+						<label for="resume">Upload your Resume (PDF or Word document) *</label>
+						<input 
+						type="file" 
+						id="resume" 
+						name="resume" 
+						accept=".pdf,.doc,.docx" 
+						required
+						>
+						<span class="error-message" id="resumeError"></span>
+						<small>Maximum file size: 5MB</small>
+					</div>
+					<!--Submit Button-->
+					<div class="form-group">
+						<button type="submit" class="submit-btn">Create Account</button>
+					</div>
+				</fieldset>
+			</form>
+		</section>
+	  	<hr>
+		<footer class="team-footer">
+			<aside id="links-footer" style="float: left; padding-right: 30px;">
+				<ul id="footer-links" style="list-style-type: none;">
+					<li><a href="HassellTylerAssignment.html" target="_blank">Home</a></li>
+					<li><a href="mission.html" target="_blank">Mission</a></li>
+					<li><a href="recruiting.html">Recruiting</a></li>
+					<li><a href="development.html" target="_blank">Development</a></li>
+					<li><a href="retention.html" target="_blank">Retention</a></li>
+					<li><a href="solutions.html">Solutions</a></li>
+				</ul>
+			</aside>
+			<p id="address-content" style="padding-top: 18px; text-align: center;">Performance Professional Consulting<br>123 Platinum Dr.<br>Anywhere, USA 12345<br>TheMan@PPC.com<br>123-456-7890</p>
+		</footer>
+	  <script src="JSsolutions.js" defer></script>
+	</main>
+  </body>
+</html>
